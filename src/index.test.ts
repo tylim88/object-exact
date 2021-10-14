@@ -3,7 +3,7 @@ import { objExact } from './index'
 import { expectType } from 'tsd'
 
 describe('objSwap', () => {
-	it('test with {a:"1",b:"2",c:"3"}', () => {
+	it('object-exact test"}', () => {
 		const a = objExact(
 			{ a: 1, b: 2 },
 			{ a: 'hello', b: false as const, c: '!' }
