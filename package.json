@@ -1,7 +1,7 @@
 {
 	"name": "object-exact",
-	"version": "1.0.0",
-	"description": "Remove excess object members",
+	"version": "2.0.0",
+	"description": "Remove excess object members and return correct type",
 	"main": "dist/index.js",
 	"types": "types/index.d.ts",
 	"scripts": {

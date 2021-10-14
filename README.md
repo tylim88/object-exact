@@ -24,8 +24,31 @@ npm i object-exact
 import { objExact } from 'object-exact'
 
 console.log(
-	objExact({ a: 1, b: 2 }, { a: 'hello', b: 'world' as const, c: '!' })
-) // { a:"hello", b:"world" } the type is { a:string, b:"world" }
+	objExact(
+		{
+			a: 'use any value here except undefined',
+			b: 'use any value here except undefined',
+		},
+		{ a: 'hello', b: false, c: '!' }
+	)
+) // { a:"hello", b:"world" } and the type is { a:string, b:boolean }
 ```
 
-return new object, does not modify original objects.
+`object(dummy,target)`: require `dummy` object and `target` object, return new object with proper typing, does not modify original objects.
+
+`dummy`: the key of this object is the key that you want, as for the value of the key, **simply use any value, except** `undefined` which bear special utility.
+
+`target`: object that you want to remove excess members, this object must be subtype of `dummy` object, which mean must have all the keys exist in `dummy` object, unless the `dummy` key's value is `undefined`, it will tries to keep the key if it is available.
+
+```ts
+import { objExact } from 'object-exact'
+
+// this will trigger typescript error: property b is missing.
+// this is because `target` must bet subtype of `dummy`
+console.log(objExact({ a: 1, b: 2 }, { a: 'hello' })) // { a:"hello" } and the type is { a: unknown, b: unknown }
+
+// if you want to make a value optional
+// then  let the `dummy` key's value be undefined, it will try to keep the key if it is available in `target`
+console.log(objExact({ a: 1, b: undefined }, { a: 'hello', c: '!' })) // { a:"hello" } and the type is {a: string}
+console.log(objExact({ a: 1, b: undefined }, { a: 'hello', b: 123, c: '!' })) // { a:"hello", b:123 } and the type is {a: string, b: number}
+```
