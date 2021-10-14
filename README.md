@@ -34,11 +34,11 @@ console.log(
 ) // { a:"hello", b:"world" } and the type is { a:string, b:boolean }
 ```
 
-`object(dummy,target)`: require `dummy` object and `target` object, return new object with proper typing, does not modify original objects.
+**`object(dummy,target)`**: require `dummy` object and `target` object, return new object with proper typing, does not modify original objects.
 
-`dummy`: the key of this object is the key that you want, as for the value of the key, **simply use any value, except** `undefined` which bear special utility.
+**`dummy`**: the key of this object is the key that you want, as for the value of the key, **simply use any value, except** `undefined` which bear special utility.
 
-`target`: object that you want to remove excess members, this object must be subtype of `dummy` object, which mean must have all the keys exist in `dummy` object, unless the `dummy` key's value is `undefined`, it will tries to keep the key if it is available.
+**`target`**: object that you want to remove excess members, this object must be subtype of `dummy` object, which mean must have all the keys exist in `dummy` object, unless the `dummy` key's value is `undefined`, it will tries to keep the key if it is available.
 
 ```ts
 import { objExact } from 'object-exact'
