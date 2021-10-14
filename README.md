@@ -38,13 +38,13 @@ console.log(
 
 **`dummy`**: the key of this object is the key that you want, as for the value of the key, **simply use any value, except** `undefined` which bear special utility.
 
-**`target`**: object that you want to remove excess members, this object must be subtype of `dummy` object, which mean must have all the keys exist in `dummy` object, unless the `dummy` key's value is `undefined`, it will tries to keep the key if it is available.
+**`target`**: object that you want to remove excess members, this object must be subtype of `dummy` object, all keys exist in `dummy` object must also present in `target` object; unless the `dummy` key's value is `undefined`, then it tries to keep the key if it is available.
 
 ```ts
 import { objExact } from 'object-exact'
 
 // this will trigger typescript error: property b is missing.
-// this is because `target` must bet subtype of `dummy`
+// `target` must bet subtype of `dummy`
 console.log(objExact({ a: 1, b: 2 }, { a: 'hello' })) // { a:"hello" } and the type is { a: unknown, b: unknown }
 
 // if you want to make a value optional

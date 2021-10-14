@@ -1,6 +1,6 @@
 {
 	"name": "object-exact",
-	"version": "2.0.4",
+	"version": "2.0.5",
 	"description": "Remove excess object members(required or partial members) and return accurate type.",
 	"main": "dist/index.js",
 	"types": "types/index.d.ts",
