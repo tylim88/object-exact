@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/object-exact)](https://www.npmjs.com/package/object-exact) [![GitHub](https://img.shields.io/github/license/tylim88/object-exact)](https://github.com/tylim88/object-exact/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/tylim88/object-exact/pulls) [![tylim88](https://circleci.com/gh/tylim88/object-exact.svg?style=shield)](<[LINK](https://github.com/tylim88/object-exact#object-exact)>)
 
-🐤 Remove excess object members(required or partial members) and return correct type.
+🐤 Remove excess object members(required or partial members) and return accurate type.
 
 🥰 0 dependency.
 
