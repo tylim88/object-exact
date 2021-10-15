@@ -1,7 +1,7 @@
 {
 	"name": "object-exact",
-	"version": "2.1.0",
-	"description": "Keep object required or partial members and remove the rest, return value with accurate type at the end, work best with typescript.",
+	"version": "2.1.1",
+	"description": "Filter or partially filter object members and remove the rest, return value with accurate typing at the end, work best with typescript.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
@@ -31,7 +31,11 @@
 		"member",
 		"remove",
 		"required",
-		"partial"
+		"partial",
+		"filter",
+		"optional",
+		"required",
+		"type"
 	],
 	"devDependencies": {
 		"@babel/cli": "^7.4.3",
