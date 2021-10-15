@@ -30,9 +30,7 @@ Example if you need to deal with 3 keys: `a`,`b`,`c`, where:
 `b` : optional
 `c` : discard
 
-and if you have object like these `{a:1, b:2, c:3}` and `{a:1, c:3}`, the output type of the first object is `{a:number, b:number}` and the type of the second object is `{a: number}`, both object will never return type `{a:number, b?:number}`.
-
-ability to return accurate typing allows you to process typing in more precise manner.
+and if you have object like these `{a:1, b:2, c:3}` and `{a:1, c:3}`, the output type of the first object is `{a:number, b:number}` and the type of the second object is `{a: number}`, both object will never return type `{a:number, b?:number}`, this allows you to process typing in more precise manner.
 
 ## 🎵 Usage
 

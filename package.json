@@ -1,6 +1,6 @@
 {
 	"name": "object-exact",
-	"version": "2.1.1",
+	"version": "2.1.2",
 	"description": "Filter or partially filter object members and remove the rest, return value with accurate typing at the end, work best with typescript.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
