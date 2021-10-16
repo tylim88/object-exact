@@ -16,9 +16,9 @@
 npm i object-exact
 ```
 
-## 🦗 Introduction
+## 🦗 Functionality
 
-This code allow you to filter or partially filter object members that you want to keep and discard the rest members, all without modifying the original object.
+This library allow you to filter or partially filter object members that you want to keep and discard the rest members, all without modifying the original object.
 
 The logic in this code is simple, you can easily create one yourself, however the best thing about this library is, it return the accurate type.
 
