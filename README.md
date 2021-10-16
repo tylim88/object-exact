@@ -20,17 +20,19 @@ npm i object-exact
 
 This library allow you to filter or partially filter object members that you want to keep and discard the rest members, all without modifying the original object.
 
-The logic in this code is simple, you can easily create one yourself, however the best thing about this library is, it return the accurate type.
+The logic in this code is simple, you can easily create one yourself, however the library assist you in creating accurate output type and handle input type with minimum interface as possible.
 
-By accurate typing it means, even if you choose to partially filter the key, it will never return partial, the type shape is exactly the same as target object.
-
-Example if you need to deal with 3 keys: `a`,`b`,`c`, where:
+Example you have a object with 3 keys: `a`,`b`,`c`, where:
 
 `a` : required
 `b` : optional
 `c` : discard
 
-and if you have object like these `{a:1, b:2, c:3}` and `{a:1, c:3}`, the output type of the first object is `{a:number, b:number}` and the type of the second object is `{a: number}`, both object will never return type `{a:number, b?:number}`, this allows you to process typing in more precise manner.
+Given the target objects `{a:1, b:2, c:3}` and `{a:1, c:3}`:
+
+For optional key, it will never return partial type key, the type shape is alway the same as target object.
+
+Hence output type of the first object is `{a:number, b:number}` and the type of the second object is `{a: number}`, both object will never return type `{a:number, b?:number}`, this allows you to process typing in more precise manner.
 
 ## 🎵 Usage
 
