@@ -1,3 +1,4 @@
+// https://stackoverflow.com/questions/69566806/typescript-change-type-to-partialnot-undefined-so-it-wont-trigger-error-2741-b
 type IncludePropertyKeys<A, U = undefined> = {
 	[P in keyof A]: A[P] extends U ? P : never
 }[keyof A]
