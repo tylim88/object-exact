@@ -24,11 +24,11 @@ The logic in this code is simple, you can easily create one yourself, however th
 
 Example you have a object with 3 keys: `a`,`b`,`c`, where:
 
-`a` : required
-`b` : optional
-`c` : discard
+`a` : required, number
+`b` : optional, number
+`c` : discard, -
 
-Given the target objects `{a:1, b:2, c:3}` and `{a:1, c:3}`:
+Based on this information, the library construct the target object type `{a:number, b?:number}`, and given the target objects `{a:1, b:2, c:3}` and `{a:1, c:3}`:
 
 For optional key, it will never return partial type key, the type shape is alway the same as target object.
 
