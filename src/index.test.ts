@@ -2,7 +2,7 @@ import 'jest'
 import { objExact } from './index'
 import { expectType } from 'tsd'
 
-describe('objSwap', () => {
+describe('objExact', () => {
 	it('object-exact test"}', () => {
 		const a = objExact(
 			{ a: 1, b: 2 },
